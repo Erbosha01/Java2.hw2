@@ -10,23 +10,22 @@ public class Main {
 //        createObject("Samsung").print();
 //        System.out.println("-----------------");
 //        createObject("Xiaomi").print();
-        Phone[] phones = {createObject("Iphone"), createObject("Samsung"), createObject("Xiaomi")};
+        Phone[] phones = {createObject(Name.Iphone), createObject(Name.Samsung), createObject(Name.Xiaomi)};
         for (Phone a : phones) {
             a.print();
             System.out.println("----------------");
         }
-
     }
 
-    public static Phone createObject(String className) {
+    public static Phone createObject(Name className) {
         switch (className) {
-            case "Iphone":
+            case Iphone:
                 Iphone iphone = new Iphone(2020, 256, "Face id", "The best camera");
                 return iphone;
-            case "Samsung":
+            case Samsung:
                 Samsung samsung = new Samsung(2021, 64, "Touch ID");
                 return samsung;
-            case "Xiaomi":
+            case Xiaomi:
                 Xiaomi xiaomi = new Xiaomi(2018, 64, "The cheapest price");
                 return xiaomi;
         }
